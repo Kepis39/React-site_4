@@ -1,0 +1,95 @@
+@use '/src/Components/style.scss' as lm;
+.sect4{
+     width: 99.2vw;
+    height: 100vh;
+    background-image:url("/src/assets/Rectanglfg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+        @include lm.respond-down('tablet') {
+            width:100% !important;
+        }
+        @include lm.respond-down('laptop1') {
+            width: 100%;
+        }
+        @include lm.respond-down('laptop2'){
+            width: 100%;
+        }
+        @include lm.respond-down('mobile'){
+            width: 100%;
+        }
+       .container{
+        @include lm.container-style2(100%, 100%);
+        @include lm.respond-down('laptop1'){
+                .knopki{
+                    width: 100%;
+                    gap: 3vh;
+                     button{
+                        width: 630px !important;
+                        height: 5vh !important;
+                        font-size: 16px !important;
+                     }
+                }
+             }
+        @include lm.respond-down('laptop2'){
+                .knopki{
+                    width: 100%;
+                    gap: 3vh;
+                     button{
+                        width: 630px !important;
+                        height: 5vh !important;
+                        font-size: 16px !important;
+                     }
+                }
+             }
+         @include lm.respond-down('tablet'){
+                h2{font-size: 37px !important;}
+                .knopki{
+                    gap: 2vh;
+                     button{
+                        width: 130px !important;
+                        height: 4vh !important;
+                        font-size: 13px !important;
+                     }
+                }
+            }
+            @include lm.respond-down('mobile'){
+                h2{font-size: 24px !important;}
+                .knopki{
+                     button{
+                        width: 130px !important;
+                        height: 7vh !important;
+                        font-size: 9px !important;
+                     }
+                }
+            }
+        h2{
+                    font-size: 57px;
+                    color: #FFFFFF;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    text-align: center;
+          }
+           .knopki{
+                    width: 40vw;
+                    display: flex;
+                    justify-content: space-evenly;
+                button{
+                    width: 20rem;
+                    height: 52px;
+                    font-size: 18px;
+                    background: none;
+                    color: #FFFFFF;
+                    border: 1px solid #FFFFFF;
+                    cursor: pointer;
+                    transition: background-color 0.5s ease;
+                 &:active{
+                    background-color: #FFFFFF;
+                    color: #000000;
+                    border: 1px solid #000000;
+                 }
+                }
+                
+            }
+       }
+
+}

@@ -1,0 +1,124 @@
+@use '/src/Components/style.scss' as lm;
+.sect1{
+    width: 99.2vw;
+    height: 100vh;
+    background-image:url("/src/assets/Rectanglegewg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include lm.respond-down('tablet') {
+        width:100% !important;
+    }
+     @include lm.respond-down('laptop1') {
+            width: 100%;
+        }
+        @include lm.respond-down('laptop2'){
+            width: 100%;
+        }
+        @include lm.respond-down('mobile'){
+            width: 100%;
+        }
+        .container{
+             @include lm.container-style2(100%, 30vh);
+             @include lm.respond-down('laptop2'){
+                width: 100%;
+                  p{
+                    font-size: 10px;
+                    width: 30vw;
+                   }
+            }
+            @include lm.respond-down('laptop1'){
+               width: 100%;
+                h1{
+                    font-size: 50px !important;
+                }
+                p{
+                    font-size: 20px !important;
+                    width: 20vw;
+                } 
+                .knopki{
+                    width: 20vw;
+                    gap: 2vh;
+                    button{
+                    width: 15rem !important;
+                    font-size: 15px !important;
+                    }
+                }
+
+            }
+            @include lm.respond-down('tablet'){
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h1{width: 80%; text-align: center;font-size: 30px !important;}
+                p{ 
+                    width: 65% !important;
+                    text-align: center;
+                    font-size: 1rem !important;
+                } 
+                .knopki{
+                    width: 34%;
+                    gap: 2vh;
+                    button{
+                    width: 10rem !important;
+                    height: 6vh !important;
+                    font-size: 12px !important;
+                    }
+            }
+            }
+            @include lm.respond-down('mobile'){
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+                h1{font-size: 20px !important;}
+                p{ 
+                    width: 100% !important;
+                    text-align: center;
+                    font-size: 1rem !important;
+                } 
+                .knopki{
+                    width: 34vw;
+                    gap: 2vh;
+                    button{
+                    width: 23rem !important;
+                    height: 6vh !important;
+                    font-size: 10px !important;
+                    }
+                }
+
+            }
+            h1{
+              color: white;  
+              font-weight: 600;
+              font-size: 57px;
+            }
+            p{
+                width: 32vw;
+                text-align: center;
+                line-height: 1.7;
+                color: #FFFFFF;
+                font-size: 28px;
+                font-weight: 400;
+            }
+            .knopki{
+                    width: 40vw;
+                    display: flex;
+                    justify-content: space-evenly;
+                button{
+                    width: 20rem;
+                    height: 52px;
+                    font-size: 18px;
+                    background: none;
+                    color: #FFFFFF;
+                    border: 1px solid #FFFFFF;
+                    cursor: pointer;
+                    transition: background-color 0.5s ease;
+                 &:active{
+                    background-color: #000000;
+                 }
+                }
+                
+            }
+        }
+}

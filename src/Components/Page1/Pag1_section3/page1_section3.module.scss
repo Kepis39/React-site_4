@@ -1,0 +1,43 @@
+@use '/src/Components/style.scss' as lm;
+.sect3{
+     width: 99.2vw;
+    height: 100vh;
+     background-color: #0B0B0B;
+        @include lm.respond-down('tablet') {
+            width:100% !important;
+        }
+     @include lm.respond-down('laptop1') {
+            width: 100%;
+        }
+        @include lm.respond-down('laptop2'){
+            width: 100%;
+        }
+        @include lm.respond-down('mobile'){
+            width: 100%;
+        }
+        .container{
+             @include lm.container-style2(100%, 100%);
+             @include lm.respond-down('tablet'){
+                h2{font-size: 42px !important;}
+                p{font-size: 16px !important;}
+            }
+            @include lm.respond-down('mobile'){
+                h2{font-size: 27px !important;}
+                p{font-size: 13px !important;}
+                img{height: 34vh !important;}
+            }
+            h2{
+                    font-size: 57px;
+                    color: #FFFFFF;
+                    font-weight: 500;
+                    line-height: 2.5;
+              }
+              p{
+                height: 12vh;
+                font-size: 25px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 1.8;
+              }
+        }
+}

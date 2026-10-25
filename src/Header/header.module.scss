@@ -9,32 +9,27 @@ header {
   }
 
   nav {
-    @include lm.container-style(90%, 90%);
+    @include lm.nav-style(80vw, 2vh);
 
     .container {
-      @include lm.container-style(35%, 100%);
-      gap: 15px;
-
+      @include lm.container-style(100%, 100%);
+      gap: 4vh;
       ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         width: 100%;
         height: 100%;
-        margin: 0;
-        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         list-style: none;
 
         li {
           display: flex;
           align-items: center;
-
           a {
             text-decoration: none;
-            color: inherit;
             font-size: 1rem;
             color: grey;
-            &:hover {
+            &:active {
               color: black;
             }
           }
@@ -42,47 +37,45 @@ header {
       }
       button {
         background: black;
-          color: white;
+        color: white;
         border: none;
         width: 130px;
-        height: 33%;
+        height: 4vh;
         cursor: pointer;
 
       }
     }
     img {
-      height: 23%;
+      height: 2vh;
       width: auto;
       object-fit: contain;
     }
-    @include lm.respond-down('laptop2') {
+    @include lm.respond-down('laptop1') {
       .container {
         width: 40%;
-
         ul li a {
           font-size: 0.9rem;
         }
-
         button {
           font-size: 0.9rem;
         }
       }
-
       img {
-        height: 20%;
+        height: 60%;
       }
     }
 
     @include lm.respond-down('tablet') {
+       width: 100%;
       height: 60%;
-      width: 90%;
       flex-direction: column-reverse;
-
+      img {
+        height: 27%;
+      }
       .container:first-of-type {
-        width: 80%;
+        width: 99.2vw;
         height: 50%;
       }
-
       .container:last-of-type {
         display: none;
       }
@@ -90,16 +83,14 @@ header {
 
     @include lm.respond-down('mobile') {
       width: 90%;
-
       img {
         display: none;
       }
       .container:first-of-type {
+        width: 84.2vw;
         height: 100%;
-        width: 100%;
-
         ul li a {
-          font-size: 0.8rem;
+          font-size: 0.6rem;
         }
       }
     }

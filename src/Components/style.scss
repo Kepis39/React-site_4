@@ -1,0 +1,100 @@
+$breakpoints: (
+  'tablet': 900px,  
+  'mobile': 550px,
+  'laptop1': 1400px,
+  'laptop2': 1300px
+);
+
+@mixin respond-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "#{$breakpoint}.";
+  }
+}
+%base-style {
+    width: 99.2vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%base-footer-style {
+    width: 99.2vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin nav-style($width,$height){
+     width: 80vw;
+    height: 2vh;
+    display: flex;
+    justify-content: space-around;
+}
+@mixin container-style($width, $height){
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin container-style2($width, $height){
+    width: $width;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6vh;
+}
+@mixin container-style3($width, $height){
+    width: $width;
+    height: 99vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4vh;
+}
+@mixin big_container-style($width, $height){
+        width: 99.2vw;
+        height: 40vh;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        gap: 3vh;
+}
+@mixin right_container-style($width, $height){
+        width: 49.2vw;
+        height: 40vh;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: flex-start;
+}
+@mixin right_container-style2($width, $height){
+        width: 49.2vw;
+        height: 60vh;
+        display: flex;
+        justify-content:center;
+        align-items: flex-end;
+}
+@mixin left_container-style($width, $height){
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        align-items: flex-end;
+        gap: 2.9vh;
+      
+}
+@mixin kolonka-style($width, $height){
+        width: 49.2vw;
+        height: 40vh;
+        display: flex;
+        justify-content:center;
+        gap: 4vh;
+        align-items: center;
+}
+

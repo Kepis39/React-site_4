@@ -1,0 +1,125 @@
+@use '/src/Components/style.scss' as lm;
+
+.sect2{
+    width: 99.2vw;
+    height: 100vh;
+     @include lm.respond-down('tablet') {
+        width:100% !important;
+    }
+     @include lm.respond-down('laptop1') {
+            width: 100%;
+        }
+        @include lm.respond-down('laptop2'){
+            width: 90%;
+        }
+        @include lm.respond-down('mobile'){
+            width: 100%;
+        }
+        .container{
+            @include lm.respond-down('tablet'){
+                h3{font-size: 42px !important;}
+                p{font-size: 16px !important;}
+                .knopki{
+                     button{
+                        width: 100px !important;
+                        height: 4vh !important;
+                        font-size: 13px !important;
+                     }
+                }
+            }
+            @include lm.respond-down('mobile'){
+                h3{font-size: 27px !important;}
+                p{font-size: 13px !important;}
+                .knopki{
+                     button{
+                        width: 80px !important;
+                        height: 4vh !important;
+                        font-size: 10px !important;
+                     }
+                }
+            }
+            @include lm.container-style3(100%, 100%);
+            h3{
+                    font-size: 50px;
+                    color: #FFFFFF;
+                    font-weight: 500;
+                    line-height: 2.5;
+              }
+              p{
+                height: 10vh;
+                font-size: 20px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 1.8;
+              }
+              .knopki{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                height: 10vh;
+                gap: 4vh;
+                 button{
+                width: 130px;
+                height: 4vh;
+                background: none;
+                border: none;
+                color: #FFFFFF;
+                font-size: 17px;
+                &:active{
+                    background: #000000;
+                }
+              }
+              }
+            .left_container{
+                width: 900px;
+                height: 870px;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
+                background-image: url("/src/assets/Rectanglegewgw.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                 @include lm.respond-down('tablet'){
+                 width: 280px !important;
+                 height:590px !important;
+                }
+                 @include lm.respond-down('mobile'){
+                 width: 190px !important;
+                 height:390px !important;
+                }
+            }
+            .right_container{
+                width: 990px;
+                height: 870px;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
+                background-image: url("/src/assets/Rectanglegwe.png");
+                background-repeat: no-repeat;
+                 background-size: cover;
+                 @include lm.respond-down('tablet'){
+                 width: 283px !important;
+                 height:590px !important;
+                }
+                  @include lm.respond-down('mobile'){
+                  width: 190px !important;
+                  height:390px !important;
+                }
+            }
+            @include lm.respond-down('laptop1'){
+                    .left_container{
+                        width: 1000px;
+                    } 
+                 }
+                  @include lm.respond-down('laptop2'){
+                    .left_container{
+                        width: 1300px;
+                    } 
+                    .right_container{
+                        width: 1000px;
+                    } 
+                 }
+        }
+}
